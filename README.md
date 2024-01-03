@@ -4,5 +4,5 @@ This repository contains the code related to the manuscript [_"Variational measu
 
 ## Overview of the Code:
 1. The mathematica file named "**mbqcvqc_example_publish.nb**" contains the necessary code to prove **Theorem1** in the manuscript.
-2. The folder generative VMBQC contains two files:
+2. The folder generative VMBQC contains two files:\\
    **$a.$** The **VMBQC_functions.py** script contains the main model of our manuscript i.e. the quantum circuit built using the theory of [Quantum Cellular Automata](https://arxiv.org/abs/2312.13185) inspired from MBQC.
