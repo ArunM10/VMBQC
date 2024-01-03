@@ -7,4 +7,4 @@ This repository contains the code related to the manuscript [_"Variational measu
 2. The folder generative VMBQC contains two files:
 
 
-   **$a.$** The **VMBQC_functions.py** script contains the main model of our manuscript i.e. the quantum circuit built using the theory of [Quantum Cellular Automata](https://arxiv.org/abs/2312.13185) inspired from MBQC. We again refer to our [article](https://arxiv.org/pdf/2310.13524.pdf) for details. 
+   **$(a)$** The **VMBQC_functions.py** script contains the main model of our manuscript i.e. the quantum circuit built using the theory of [Quantum Cellular Automata](https://arxiv.org/abs/2312.13185) inspired from MBQC. We again refer to our [article](https://arxiv.org/pdf/2310.13524.pdf) for details. 
