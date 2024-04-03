@@ -364,6 +364,8 @@ def random_choice_2d(probabilities,depth,qubits):
         result[index] = np.random.choice([0, 1], p=[1-sigmoid(p), sigmoid(p)])
 
     return result
+
+# Function to sample the "s" values in the 2-D grid
 def replace_elements(matrix,depth,qubits):
     assert matrix.shape == (depth, qubits), 
 
