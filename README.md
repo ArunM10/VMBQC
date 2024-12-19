@@ -11,3 +11,6 @@ This repository contains the code related to the manuscript [_"Variational measu
 
 
    **$(b)$** The **8 qubits Double Gaussian.ipynb** file contains the steps of the algorithm of our manuscript starting from initializing the model, sampling bitstrings, and calculating MMD loss and gradients manually to optimize the entire model. We again refer to our [article](https://arxiv.org/pdf/2310.13524.pdf) for details. 
+
+## Reproducting results
+The results from the paper can be found in the folder `/Results`. Each data file contains many models which need to be averaged over in order to reproduce the plots in the paper.
