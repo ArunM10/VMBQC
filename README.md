@@ -19,7 +19,7 @@ The results from the paper can be found in the folder `/Results`. Each data file
 If you wish to cite our git repository please use the following metadata:
 
 ```
-\@software{Majumder_VMBQC,
+@software{Majumder_VMBQC,
 author = {Majumder, Arunava},
 title = {{VMBQC}},
 url = {https://github.com/ArunM10/VMBQC}
