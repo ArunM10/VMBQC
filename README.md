@@ -17,4 +17,8 @@ The results from the paper can be found in the folder `/Results`. Each data file
 
 ## Cite our work
 If you wish to cite work git repository use the citation command:
-\Majumder, A. VMBQC [Computer software]. https://github.com/ArunM10/VMBQC
+"\@software{Majumder_VMBQC,
+author = {Majumder, Arunava},
+title = {{VMBQC}},
+url = {https://github.com/ArunM10/VMBQC}
+}"
