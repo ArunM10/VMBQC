@@ -14,3 +14,7 @@ This repository contains the code related to the manuscript [_"Variational measu
 
 ## Reproducting results
 The results from the paper can be found in the folder `/Results`. Each data file contains many models which need to be averaged over in order to reproduce the plots in the paper.
+
+## Cite our work
+If you wish to cite work git repository use the citation command:
+\Majumder, A. VMBQC [Computer software]. https://github.com/ArunM10/VMBQC
