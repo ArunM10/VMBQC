@@ -14,7 +14,7 @@ This repository contains the code related to the manuscript [_"Variational measu
 
    **$(b)$** The **8 qubits Double Gaussian.ipynb** file contains the steps of the algorithm of our manuscript starting from initializing the model, sampling bitstrings, and calculating MMD loss and gradients manually to optimize the entire model. We, again, refer to our [article](https://arxiv.org/pdf/2310.13524.pdf) for details.
 
-   To run and reproduce similar results to our paper, one can run the above Jupyter Notebook for different settings. For instance, in figure 4 in our manuscript, the samples are generated from the VMBQC circuit itself. In that case, the samples (from channels) are generated using the following functions
+   To run and reproduce similar results to our paper, one can run the above Jupyter Notebook for different settings. For instance, in #Fig.4 in our manuscript, the samples are generated from the VMBQC circuit itself. In that case, the samples (from channels) are generated using the following functions
    ```
     def get_samples_jl(runs, params):
         arr=[]
