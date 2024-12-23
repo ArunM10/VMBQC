@@ -15,7 +15,7 @@ This repository contains the code related to the manuscript [_"Variational measu
 ## Reproducting results
 The results from the paper can be found in the folder `/Results`. Each data file contains multiple datasets which need to be averaged over in order to reproduce the plots in the paper.
 
-To reproduce the exact results one simply needs to load the data file using ` np.load('')`
+To reproduce the exact results one simply needs to load the data file using ` np.load('Gaussian_learned_by_channel_8_qubits.npy')`, for example, and average it over the number of models. Each model is trained with either 200 (in some cases 199) epochs.
 
 ## Cite our work
 If you wish to cite our git repository please use the following metadata:
