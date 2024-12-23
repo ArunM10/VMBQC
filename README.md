@@ -10,7 +10,9 @@ This repository contains the code related to the manuscript [_"Variational measu
    **$(a)$** The **VMBQC_functions.py** script contains the main model of our manuscript i.e. the quantum circuit built using the theory of [Quantum Cellular Automata](https://arxiv.org/abs/2312.13185) inspired from MBQC. We refer to our [article](https://arxiv.org/pdf/2310.13524.pdf) for details.
 
 
-   **$(b)$** The **8 qubits Double Gaussian.ipynb** file contains the steps of the algorithm of our manuscript starting from initializing the model, sampling bitstrings, and calculating MMD loss and gradients manually to optimize the entire model. We, again, refer to our [article](https://arxiv.org/pdf/2310.13524.pdf) for details. 
+   **$(b)$** The **8 qubits Double Gaussian.ipynb** file contains the steps of the algorithm of our manuscript starting from initializing the model, sampling bitstrings, and calculating MMD loss and gradients manually to optimize the entire model. We, again, refer to our [article](https://arxiv.org/pdf/2310.13524.pdf) for details.
+
+   Reproducing similar results to our paper, one can run the above jupyter notebook for different instances
 
 ## Reproducting results
 The results from the paper can be found in the folder `/Results`. Each data file contains multiple datasets which need to be averaged over in order to reproduce the plots in the paper.
