@@ -14,8 +14,11 @@ This repository contains the code related to the manuscript [_"Variational measu
 
    **$(b)$** The **8 qubits Double Gaussian.ipynb** file contains the steps of the algorithm of our manuscript starting from initializing the model, sampling bitstrings, and calculating MMD loss and gradients manually to optimize the entire model. We, again, refer to our [article](https://arxiv.org/pdf/2310.13524.pdf) for details.
 
-   To run and reproduce similar results to our paper, one can run the above Jupyter Notebook for different settings. For instance, in #Fig.4 in our manuscript, the samples are generated from the VMBQC circuit itself. In that case, the samples (from channels) are generated using the following functions
+   To run and reproduce similar results to our paper, one can run the above Jupyter Notebook for different settings. For instance, in **Fig.4** in our manuscript, the samples are generated from the VMBQC circuit itself. In that case, the samples (from channels) are generated using the following functions (after setting the number of qubits and depth of the circuits):
    ```
+
+    model=VMBQC(qubits,layers,N)
+   
     def get_samples_jl(runs, params):
         arr=[]
         p=params[:int(len(params)/2)] 
@@ -40,7 +43,20 @@ This repository contains the code related to the manuscript [_"Variational measu
         return decimal_list
    ```
 
-   Before executing the above functions make sure that you have the necessary packages installed in your machine. 
+   Before executing the above functions make sure that you have the necessary packages installed in your machine.
+
+   Whereas if you want to collect samples from the unitary model or the model where we do not correct byproduct at the end of the circuit then simply running the below function will do the job
+   ```
+    
+    def sample_circ(par):
+    
+       binary_array = np.array(eqv_circ_st(params))
+       powers_of_two = 2 ** np.arange(binary_array.shape[1])[::-1]
+       decimal_array = np.sum(binary_array * powers_of_two, axis=1)
+       decimal_list = decimal_array.tolist()
+    
+       return decimal_list
+   ```
 
 ## Reproducting results
 The results from the paper can be found in the folder `/Results`. Each data file contains multiple datasets which need to be averaged over in order to reproduce the plots in the paper.
