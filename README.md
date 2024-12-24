@@ -76,6 +76,8 @@ def mmd_loss(params):
 ```
 Similarly, the functions `mmd_grad_p_new(par)` and `mmd_grad_theta(par)` will change accordingly.
 
+The rest of the code remains the same and after training, we expect to reproduce similar results (if not the same) as we have in the manuscript.
+
 ## Reproducting results
 The results from the paper can be found in the folder `/Results`. Each data file contains multiple datasets which need to be averaged over in order to reproduce the plots in the paper.
 
