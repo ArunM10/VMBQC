@@ -14,7 +14,7 @@ This repository contains the code related to the manuscript [_"Variational measu
 
    **$(b)$** The **8 qubits Double Gaussian.ipynb** file contains the steps of the algorithm of our manuscript starting from initializing the model, sampling bitstrings, and calculating MMD loss and gradients manually to optimize the entire model. We, again, refer to our [article](https://arxiv.org/pdf/2310.13524.pdf) for details.
 
-   To run and reproduce similar results to our paper, one can run the above Jupyter Notebook for different settings. For instance, in **Fig.4** in our manuscript, the samples are generated from the VMBQC circuit itself. In that case, the samples (from channels) are generated using the following functions (after setting the number of qubits and depth of the circuits):
+   To run the code and reproduce similar results to our paper, one can run the above Jupyter Notebook for different settings. For instance, in **Fig.4** in our manuscript, the target samples are generated from the VMBQC (channel) circuit itself. In that case, the samples (from channels) are generated using the following functions (after setting the number of qubits and depth of the circuits):
    ```
 
     model=VMBQC(qubits,layers,N)
@@ -57,6 +57,25 @@ This repository contains the code related to the manuscript [_"Variational measu
     
        return decimal_list
    ```
+
+   One can store the samples in an array or run the function
+   ```
+   # sampling from target distribution e.g. mixed gaussian
+  def sample_target_function(par):
+      ret = sample_circ(par)
+      return ret.copy()
+   ```
+In the case of VMBQC as the target distribution (fig. 4) one also needs to change the `sample_target_function(par)` function later in the code. For example, in the `mmd_loss` will take the below form
+
+```
+def mmd_loss(params):
+    
+    s2=sample_target_function(par) ### Here "par" is the set of circuit parameters whereas "sample_target_function()" (in case of Gaussian target distribution) doesn't need any parameters
+    s1=sample_circ(params)
+    res=kernel_exp_torch(s1,s1)-2*kernel_exp_torch(s1,s2)+kernel_exp_torch(s2,s2)
+    return res.detach().cpu().numpy()
+```
+Similarly, the functions `mmd_grad_p_new(par)` and `mmd_grad_theta(par)` will change accordingly.
 
 ## Reproducting results
 The results from the paper can be found in the folder `/Results`. Each data file contains multiple datasets which need to be averaged over in order to reproduce the plots in the paper.
