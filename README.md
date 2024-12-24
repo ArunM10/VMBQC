@@ -60,10 +60,9 @@ This repository contains the code related to the manuscript [_"Variational measu
    One can store the samples in an array or run the function
    
    ```
-   # sampling from target distribution e.g. mixed gaussian
-  def sample_target_function(par):
-      ret = sample_circ(par)
-      return ret.copy()
+    def sample_target_function(par):
+        ret = sample_circ(par)
+        return ret.copy()
    ```
 In the case of VMBQC as the target distribution (fig. 4) one also needs to change the `sample_target_function(par)` function later in the code. For example, in the `mmd_loss` will take the below form
 
