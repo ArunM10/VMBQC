@@ -47,7 +47,6 @@ This repository contains the code related to the manuscript [_"Variational measu
 
    Whereas if you want to collect samples from the unitary model or the model where we do not correct byproduct at the end of the circuit then simply running the below function will do the job
    ```
-    
     def sample_circ(par):
     
        binary_array = np.array(eqv_circ_st(params))
@@ -59,6 +58,7 @@ This repository contains the code related to the manuscript [_"Variational measu
    ```
 
    One can store the samples in an array or run the function
+   
    ```
    # sampling from target distribution e.g. mixed gaussian
   def sample_target_function(par):
