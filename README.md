@@ -46,7 +46,7 @@ This repository contains the code related to the manuscript [_"Variational measu
    Before executing the above functions make sure that you have the necessary packages installed in your machine.
 
    Whereas if you want to collect samples from the unitary model or the model where we do not correct byproduct at the end of the circuit then simply running the below function will do the job
-   ```
+   ```python
     def sample_circ(par):
     
        binary_array = np.array(eqv_circ_st(params))
@@ -59,14 +59,14 @@ This repository contains the code related to the manuscript [_"Variational measu
 
    One can store the samples in an array or run the function
    
-   ```
+   ```python
     def sample_target_function(par):
         ret = sample_circ(par)
         return ret.copy()
    ```
 When Gaussian is the target distribution (fig. 5) there is no need to change anything in the code but in the case of VMBQC as the target distribution (fig. 4) one also needs to change the `sample_target_function(par)` function later in the code. For example, in the `mmd_loss` will take the form below
 
-```
+```python
 def mmd_loss(params):
     
     s2=sample_target_function(par) ### Here "par" is the set of circuit parameters whereas "sample_target_function()" (in case of Gaussian target distribution) doesn't need any parameters
